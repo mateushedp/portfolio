@@ -1,115 +1,112 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { MapPin, MoveRight } from "lucide-react";
+import ProjectRow from "@/components/project-row";
+import TechBadge from "@/components/tech-badge";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+function Home() {
+	return (
+		<div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-beige text-mainGrey">
+			<section className="h-screen w-full snap-start relative px-[231px] flex flex-col justify-center">
+				<nav className="absolute top-0 left-0 w-full h-[92px] flex items-center justify-end px-[231px] z-10">
+					<ul className="font-unigeo text-lg flex gap-11">
+						<li>
+							<a href="#about" className="group flex items-center gap-1 transition-all duration-300">
+								<span className="opacity-0 translate-x-[-8px] group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
+									<MoveRight/>
+								</span>
+								About Me
+								
+							</a>
+						</li>
+						<li>
+							<a href="#work" className="group flex items-center gap-1 transition-all duration-300">
+								<span className="opacity-0 translate-x-[-8px] group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
+									<MoveRight/>
+								</span>
+								My Work
+							</a>
+						</li>
+					</ul>
+				</nav>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+				<div className="flex justify-between items-start w-full mt-[92px]">
+					<div className="w-[250px]">
+						<div className="w-[256px] h-[256px] rounded-full bg-[url('/images/selfiee.jpg')] bg-cover bg-center border-[3px] border-black drop-shadow-brutalist-lg"></div>
+						<div className="w-full font-cabin mt-8">
+							<h3 className="text-2xl font-bold leading-tight">Hi, I'm Mateus,</h3>
+							<p className="leading-4">a front end developer focused on creating beautiful digital experiences.</p>
+							<div className="flex items-end gap-1 font-semibold my-3">
+								<MapPin size={16} />
+								<p className="font-semibold leading-none -mb-[2px]"> Based in Brasil.</p>
+							</div>
+							<div className="flex gap-3">
+								<a href="https://github.com/mateushedp" target="_blank"><img src="/icons/github.png" className="w-6 h-6" alt="Github icon" /></a>
+								<a href="https://www.linkedin.com/in/mateus-pacheco-02b675153/" target="_blank"><img src="/icons/linkedin.png" className="w-6 h-6" alt="Linkedin icon" /></a>
+								<a href="mailto:mateushedlundp@gmail.com" aria-label="Send Email"><img src="/icons/mail.png" className="w-6 h-6" alt="Mail icon" /></a>
+							</div>
+						</div>
+					</div>
 
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+					<div className="w-[495px]">
+						<h1 className="text-right font-unigeo font-bold text-[70px] leading-tight">creative frontend development</h1>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" className="h-screen w-full bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] px-[231px] flex flex-col justify-center">
+				<h2 className="text-center snap-start">About Me</h2>
+				<p className="font-cabin text-2xl text-mainGrey text-justify mt-9">
+					I’m a professional front end developer and UI designer who focuses on creating beautiful, intuitive experiences for users. With a passion for turning ideas into clean, functional interfaces, I bridge the gap between design and code. My work lives at the intersection of creativity and logic; whether it's crafting scalable design systems, prototyping sleek interfaces, or bringing UI to life with modern frameworks like React and Next.js, I approach every project with a user-first mindset and a designer’s eye for detail.
+				</p>
+				<div className="w-full h-8 mt-[76px] flex gap-8">
+					<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
+					<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
+					<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
+					<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
+					<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
+					<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+					<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
+				</div>
+			</section>
+
+			<section id="work" className="h-screen w-full bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] px-[231px] flex flex-col pt-20">
+				<h2 className="text-center snap-start">My Work</h2>
+				<div className="min-h-screen pt-4 pb-12 overflow-y-auto scrollbar-hidden">
+					<ProjectRow
+						title="Flickle"
+						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
+						githubLink="https://github.com/mateushedp/flickle"
+						liveLink="https://flickle.vercel.app/"
+						techData={[
+							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
+							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
+							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
+							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
+						]}
+					/>
+					<ProjectRow
+						title="Flickle"
+						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
+						techData={[
+							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
+							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
+							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
+							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
+						]}
+					/>
+					<ProjectRow
+						title="Flickle"
+						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
+						techData={[
+							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
+							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
+							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
+							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
+						]}
+					/>
+				</div>
+			</section>
+		</div>
+	);
 }
+
+export default Home;

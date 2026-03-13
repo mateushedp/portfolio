@@ -1,8 +1,41 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F5F2;
+  --foreground: #282825;
+}
+
+@font-face {
+  font-family: 'Unigeo';
+  src: url('/fonts/Unigeo32-Medium-trial-BF6556e1d9d0a4a.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unigeo';
+  src: url('/fonts/Unigeo32-Bold-trial-BF6556e1d98e330.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h2 {
+  font-family: 'Unigeo';
+  font-size: 48px;
+  font-weight: semibold;
+  margin-top: 24px;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 @theme inline {
