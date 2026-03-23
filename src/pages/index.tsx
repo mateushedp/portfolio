@@ -86,17 +86,46 @@ function Home() {
 
 			<section id="about" className="md:h-screen w-full pb-8 bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] px-4 md:px-[231px] flex flex-col justify-center">
 				<h2 className="text-center">About Me</h2>
-				<p className="font-cabin text-2xl text-mainGrey text-justify mt-9">
+				<p className="font-cabin text-xl md:text-2xl text-mainGrey text-justify mt-9">
 					I’m a professional front end developer and UI designer who focuses on creating beautiful, intuitive experiences for users. With a passion for turning ideas into clean, functional interfaces, I bridge the gap between design and code. My work lives at the intersection of creativity and logic; whether it's crafting scalable design systems, prototyping sleek interfaces, or bringing UI to life with modern frameworks like React and Next.js, I approach every project with a user-first mindset and a designer’s eye for detail.
 				</p>
-				<div className="w-full h-8 mt-[76px] flex gap-8">
-					<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
-					<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
-					<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
-					<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
-					<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
-					<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
-					<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
+				<div className="w-full h-[125px] mt-[76px] overflow-hidden">
+					{/* desktop */}
+					<div className="hidden md:flex gap-8">
+						<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
+						<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
+						<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
+						<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
+						<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
+						<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+						<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
+					</div>
+
+					{/* mobile */}
+					<motion.div
+						className="md:hidden flex w-max"
+						animate={{ x: [0, "-50%"] }}
+						transition={{ duration: 25, repeat: Infinity, ease: "linear", repeatType: "loop" }}
+					>
+						<div className="flex gap-8 pr-8">
+							<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
+							<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
+							<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
+							<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
+							<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
+							<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+							<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
+						</div>
+						<div className="flex gap-8 pr-8">
+							<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
+							<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
+							<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
+							<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
+							<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
+							<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+							<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
+						</div>
+					</motion.div>
 				</div>
 			</section>
 
