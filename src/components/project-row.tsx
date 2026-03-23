@@ -13,17 +13,15 @@ type ComponentProps = {
 	githubLink?: string,
 	liveLink?: string,
 	techData: TechData[],
+	images: string[];
 }
 
-function ProjectRow({title, description, githubLink, liveLink, techData}: ComponentProps) {
+function ProjectRow({title, description, githubLink, liveLink, techData, images}: ComponentProps) {
 	return (
 		<div className="w-full flex flex-col items-center md:flex-row md:items-start mt-12 px-4 md:px-0">
 			<div className="flex-shrink-0 w-full md:w-[300px] h-[295px]">
 				<ImageSlider 
-					images={[
-						"/images/flickle_print_1.jpg",
-						"/images/selfiee.jpg",
-					]}/>
+					images={images}/>
 			</div>
 
 			{/* description */}
@@ -39,10 +37,10 @@ function ProjectRow({title, description, githubLink, liveLink, techData}: Compon
 				<p className="font-cabin text-lg leading-tight text-justify md:text-left">{description}</p>
 						
 				<div className="flex flex-col gap-1 md:gap-4 font-unigeo text-sm">
-					{githubLink &&
+					{liveLink &&
 					<a
 						target="_blank"
-						href={githubLink}
+						href={liveLink}
 						className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
 					>
 						<ExternalLink size={14} />
@@ -53,10 +51,10 @@ function ProjectRow({title, description, githubLink, liveLink, techData}: Compon
 					</a>
 				
 					}
-					{liveLink &&
+					{githubLink &&
 					<a
 						target="_blank"
-						href={liveLink}
+						href={githubLink}
 						className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
 					>
 						<img src="/icons/github.png" alt="Github icon" className="w-[14px] h-[14px]"/>
@@ -65,7 +63,6 @@ function ProjectRow({title, description, githubLink, liveLink, techData}: Compon
 							className="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-[width] duration-500 group-hover:w-full"
 						/>
 					</a>
-						// <a target="_blank" href={liveLink} className="flex gap-2"><img src="/icons/github.png" alt="Github icon" className="w-[14px] h-[14px]"/>View code</a>
 					}
 
 				</div>
