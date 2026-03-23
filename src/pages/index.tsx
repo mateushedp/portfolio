@@ -8,8 +8,8 @@ import { AnimatePresence, motion } from "framer-motion";
 function Home() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	return (
-		<div className="h-screen w-full overflow-y-scroll scroll-smooth bg-beige text-mainGrey">
-			<section className="md:h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[92px] md:pt-0">
+		<div className="w-full bg-beige text-mainGrey">
+			<section className="md:min-h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[92px] md:pt-0">
 				<nav className="absolute top-0 left-0 w-full h-[92px] flex items-center justify-end px-4 md:px-[231px] z-10">
 					{/* hamburguer - só no mobile */}
 					<button
@@ -129,9 +129,9 @@ function Home() {
 				</div>
 			</section>
 
-			<section id="work" className="h-screen w-full bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] md:px-[231px] flex flex-col pt-20">
+			<section id="work" className="w-full bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] md:px-[231px] flex flex-col py-20">
 				<h2 className="text-center">My Work</h2>
-				<div className="min-h-screen pt-4 pb-12 md:overflow-y-auto scrollbar-hidden">
+				<div className="pt-4 pb-12">
 					<ProjectRow
 						title="Flickle"
 						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
