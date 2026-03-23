@@ -133,37 +133,22 @@ function Home() {
 				<h2 className="text-center">My Work</h2>
 				<div className="pt-4 pb-12">
 					<ProjectRow
-						title="Flickle"
-						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
-						githubLink="https://github.com/mateushedp/flickle"
-						liveLink="https://flickle.vercel.app/"
+						title="Reelie"
+						description="A daily movie guessing game inspired by Wordle. Guess the film of the day based on genre, runtime, release year, country and score  — each guess reveals how close you are through color-coded feedback."
+						githubLink="https://github.com/mateushedp/reelie"
+						liveLink="https://reelie.vercel.app/"
 						techData={[
 							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
 							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
 							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
 							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
 						]}
-					/>
-					<ProjectRow
-						title="Flickle"
-						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
-						techData={[
-							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
-							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
-							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
-							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
+						images={[
+							"/images/reelie-print-1.jpg",
+							"/images/reelie-print-2.jpg"
 						]}
 					/>
-					<ProjectRow
-						title="Flickle"
-						description="Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget. Lorem ipsum dolor sit amet consectetur. Et volutpat tristique egestas eget."
-						techData={[
-							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
-							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
-							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
-							{ title: "Prisma", iconSrc: "/icons/nextjs.svg" },
-						]}
-					/>
+					
 				</div>
 			</section>
 		</div>
