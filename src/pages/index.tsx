@@ -1,4 +1,4 @@
-import { MapPin, MoveRight } from "lucide-react";
+import { MapPin, MoveRight, FileUser } from "lucide-react";
 import ProjectRow from "@/components/project-row";
 import TechBadge from "@/components/tech-badge";
 import { useState } from "react";
@@ -76,6 +76,13 @@ function Home() {
 								<a href="https://github.com/mateushedp" target="_blank"><img src="/icons/github.png" className="w-6 h-6" alt="Github icon" /></a>
 								<a href="https://www.linkedin.com/in/mateus-pacheco-02b675153/" target="_blank"><img src="/icons/linkedin.png" className="w-6 h-6" alt="Linkedin icon" /></a>
 								<a href="mailto:mateushedlundp@gmail.com" aria-label="Send Email"><img src="/icons/mail.png" className="w-6 h-6" alt="Mail icon" /></a>
+								<a 
+									href="/cv.pdf" 
+									download
+									aria-label="Download CV"
+								>
+									<FileUser strokeWidth={1} />
+								</a>
 							</div>
 						</div>
 					</div>
