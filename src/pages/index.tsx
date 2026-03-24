@@ -87,7 +87,7 @@ function Home() {
 			<section id="about" className="md:h-screen w-full pb-8 bg-[url('/images/white-line-pattern.svg')] bg-repeat bg-center bg-[length:80px_80px] px-4 md:px-[231px] flex flex-col justify-center">
 				<h2 className="text-center">About Me</h2>
 				<p className="font-cabin text-xl md:text-2xl text-mainGrey text-justify mt-9">
-					I’m a professional front end developer and UI designer who focuses on creating beautiful, intuitive experiences for users. With a passion for turning ideas into clean, functional interfaces, I bridge the gap between design and code. My work lives at the intersection of creativity and logic; whether it's crafting scalable design systems, prototyping sleek interfaces, or bringing UI to life with modern frameworks like React and Next.js, I approach every project with a user-first mindset and a designer’s eye for detail.
+					Frontend development is where I've spent the last 3+ years, working mostly with React, Next.js and TypeScript. What sets me apart is that I genuinely enjoy the design side too — I pay attention to details, care about user experience, and can make UI decisions without needing everything handed to me. Beyond frontend, I have solid experience with backend development and DevOps, which gives me a good understanding of the full stack and lets me collaborate effectively across any team.
 				</p>
 				<div className="w-full h-[125px] mt-[76px] overflow-hidden px-1">
 					{/* desktop */}
