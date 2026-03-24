@@ -97,20 +97,8 @@ function Home() {
 					Frontend development is where I've spent the last 3+ years, working mostly with React, Next.js and TypeScript. What sets me apart is that I genuinely enjoy the design side too — I pay attention to details, care about user experience, and can make UI decisions without needing everything handed to me. Beyond frontend, I have solid experience with backend development and DevOps, which gives me a good understanding of the full stack and lets me collaborate effectively across any team.
 				</p>
 				<div className="w-full h-[125px] mt-[76px] overflow-hidden px-1">
-					{/* desktop */}
-					<div className="hidden md:flex gap-8">
-						<TechBadge title="HTML" iconSrc="/icons/html5.svg" />
-						<TechBadge title="CSS" iconSrc="/icons/css3.svg" />
-						<TechBadge title="Javascript" iconSrc="/icons/js.svg" />
-						<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
-						<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
-						<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
-						<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
-					</div>
-
-					{/* mobile */}
 					<motion.div
-						className="md:hidden flex w-max"
+						className="flex w-max"
 						animate={{ x: [0, "-50%"] }}
 						transition={{ duration: 25, repeat: Infinity, ease: "linear", repeatType: "loop" }}
 					>
@@ -121,6 +109,9 @@ function Home() {
 							<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
 							<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
 							<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+							<TechBadge title="Node.js" iconSrc="/icons/nodejs.svg" />
+							<TechBadge title="MongoDB" iconSrc="/icons/mongodb.svg" />
+							<TechBadge title="Github" iconSrc="/icons/github.png" />
 							<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
 						</div>
 						<div className="flex gap-8 pr-8">
@@ -130,6 +121,9 @@ function Home() {
 							<TechBadge title="Tailwind" iconSrc="/icons/tailwindcss.svg" />
 							<TechBadge title="React.js" iconSrc="/icons/reactjs.svg" />
 							<TechBadge title="Next.js" iconSrc="/icons/nextjs.svg" />
+							<TechBadge title="Node.js" iconSrc="/icons/nodejs.svg" />
+							<TechBadge title="MongoDB" iconSrc="/icons/mongodb.svg" />
+							<TechBadge title="Github" iconSrc="/icons/github.png" />
 							<TechBadge title="Figma" iconSrc="/icons/figma.svg" />
 						</div>
 					</motion.div>
