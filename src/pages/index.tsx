@@ -9,8 +9,8 @@ function Home() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	return (
 		<div className="w-full bg-beige text-mainGrey">
-			<section className="md:min-h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[92px] md:pt-0">
-				<nav className="absolute top-0 left-0 w-full h-[92px] flex items-center justify-end px-4 md:px-[231px] z-10">
+			<section className="min-h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[75px] md:pt-[92px] md:pt-0">
+				<nav className="absolute top-0 left-0 w-full h-[75px] md:h-[92px] flex items-center justify-end px-4 md:px-[231px] z-10">
 					{/* hamburguer - só no mobile */}
 					<button
 						className="md:hidden flex flex-col gap-1.5 p-2"
@@ -58,17 +58,17 @@ function Home() {
 					</AnimatePresence>
 				</nav>
 
-				<div className="flex flex-col gap-6 md:gap-0 items-center md:flex-row-reverse md:justify-between md:items-start w-full mt-2 md:mt-[92px]">
+				<div className="flex flex-col gap-6 md:gap-0 items-center md:flex-row-reverse md:justify-between md:items-start w-full md:mt-[92px]">
 					<div className="w-full md:w-[495px]">
 						<h1 className="text-center font-unigeo font-bold text-[40px] md:text-right md:text-[70px] leading-tight">creative frontend development</h1>
 					</div>
 					
 					<div className="w-[250px]">
-						<div className="w-[256px] h-[256px] rounded-full bg-[url('/images/selfiee.jpg')] bg-cover bg-center border-[3px] border-black drop-shadow-brutalist-lg"></div>
-						<div className="w-full font-cabin mt-8 flex items-center flex-col text-center md:block md:text-left">
-							<h3 className="text-2xl font-bold leading-tight">Hi, I'm Mateus,</h3>
-							<p className="leading-4">a front end developer focused on creating beautiful digital experiences.</p>
-							<div className="flex items-end gap-1 font-semibold my-3">
+						<div className="w-[256px] h-[256px] rounded-full bg-[url('/images/selfiee.jpg')] bg-cover bg-center border-[3px] border-black drop-shadow-brutalist-lg mt-2 md:mt-0"></div>
+						<div className="w-full gap-2 font-cabin mt-8 flex items-center flex-col text-center md:block md:text-left">
+							<h3 className="text-3xl font-bold leading-tight">Hi, I'm Mateus,</h3>
+							<p className="leading-5 text-lg">a front end developer focused on creating beautiful digital experiences.</p>
+							<div className="flex items-end gap-2 font-semibold my-3">
 								<MapPin size={16} />
 								<p className="font-semibold leading-none -mb-[2px]"> Based in Brasil.</p>
 							</div>
