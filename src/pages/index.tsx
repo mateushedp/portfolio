@@ -9,7 +9,7 @@ function Home() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	return (
 		<div className="w-full bg-beige text-mainGrey">
-			<section className="min-h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[75px] md:pt-[92px] md:pt-0">
+			<section className="min-h-screen w-full relative pb-8 px-4 md:px-[231px] flex flex-col md:justify-center pt-[75px] md:pt-0">
 				<nav className="absolute top-0 left-0 w-full h-[75px] md:h-[92px] flex items-center justify-end px-4 md:px-[231px] z-10">
 					{/* hamburguer - só no mobile */}
 					<button
