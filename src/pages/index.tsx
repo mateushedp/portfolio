@@ -146,7 +146,8 @@ function Home() {
 						]}
 						images={[
 							"/images/reelie-print-1.jpg",
-							"/images/reelie-print-2.jpg"
+							"/images/reelie-print-2.jpg",
+							"/images/reelie-print-3.jpg"
 						]}
 					/>
 					
