@@ -26,7 +26,7 @@ function Home() {
 						<li>
 							<a href="#about" className="group flex items-center gap-1 transition-all duration-300">
 								<span className="opacity-0 translate-x-[-8px] group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-									<MoveRight/>
+									<MoveRight />
 								</span>
 								About Me
 							</a>
@@ -34,7 +34,7 @@ function Home() {
 						<li>
 							<a href="#work" className="group flex items-center gap-1 transition-all duration-300">
 								<span className="opacity-0 translate-x-[-8px] group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-									<MoveRight/>
+									<MoveRight />
 								</span>
 								My Work
 							</a>
@@ -62,7 +62,7 @@ function Home() {
 					<div className="w-full md:w-[495px]">
 						<h1 className="text-center font-unigeo font-bold text-[40px] md:text-right md:text-[70px] leading-tight">creative frontend development</h1>
 					</div>
-					
+
 					<div className="w-[250px]">
 						<div className="w-[256px] h-[256px] rounded-full bg-[url('/images/selfiee.jpg')] bg-cover bg-center border-[3px] border-black drop-shadow-brutalist-lg mt-2 md:mt-0"></div>
 						<div className="w-full gap-2 font-cabin mt-8 flex items-center flex-col text-center md:block md:text-left">
@@ -76,8 +76,8 @@ function Home() {
 								<a href="https://github.com/mateushedp" target="_blank"><img src="/icons/github.png" className="w-6 h-6" alt="Github icon" /></a>
 								<a href="https://www.linkedin.com/in/mateus-pacheco-02b675153/" target="_blank"><img src="/icons/linkedin.png" className="w-6 h-6" alt="Linkedin icon" /></a>
 								<a href="mailto:mateushedlundp@gmail.com" aria-label="Send Email"><img src="/icons/mail.png" className="w-6 h-6" alt="Mail icon" /></a>
-								<a 
-									href="/cv.pdf" 
+								<a
+									href="/cv.pdf"
 									download
 									aria-label="Download CV"
 								>
@@ -87,7 +87,7 @@ function Home() {
 						</div>
 					</div>
 
-					
+
 				</div>
 			</section>
 
@@ -150,7 +150,24 @@ function Home() {
 							"/images/reelie-print-3.jpg"
 						]}
 					/>
-					
+
+					<ProjectRow
+						title="Raphaela Andrades"
+						description="Professional landing page built for a psychologist, featuring a functional contact form with validation, email delivery via Resend, and a responsive design faithful to the Figma prototype."
+						githubLink="https://github.com/mateushedp/portfolio-psico-raphaela"
+						liveLink="https://portfolio-psico-raphaela.vercel.app/"
+						techData={[
+							{ title: "Tailwind", iconSrc: "/icons/tailwindcss.svg" },
+							{ title: "React.js", iconSrc: "/icons/reactjs.svg" },
+							{ title: "Next.js", iconSrc: "/icons/nextjs.svg" },
+						]}
+						images={[
+							"/images/raphaela-print-1.jpg",
+							"/images/raphaela-print-2.jpg",
+							"/images/raphaela-print-3.jpg"
+						]}
+					/>
+
 				</div>
 			</section>
 		</div>
