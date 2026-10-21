@@ -16,59 +16,59 @@ type ComponentProps = {
 	images: string[];
 }
 
-function ProjectRow({title, description, githubLink, liveLink, techData, images}: ComponentProps) {
+function ProjectRow({ title, description, githubLink, liveLink, techData, images }: ComponentProps) {
 	return (
 		<div className="w-full flex flex-col items-center md:flex-row md:items-start mt-12 px-4 md:px-0">
-			<div className="flex-shrink-0 w-full md:w-[300px] h-[295px]">
-				<ImageSlider 
-					images={images}/>
+			<div className="flex-shrink-0 w-full h-[260px] md:w-[480px] h-[320px]">
+				<ImageSlider
+					images={images} />
 			</div>
 
 			{/* description */}
 			<div className="flex flex-col my-3 gap-2 md:gap-6 md:ml-9">
-				{techData && techData.length > 0 && 
-				<div className="flex gap-2">
-					{techData.map(tech =>  (
-						<TechLabel  key={tech.title} title={tech.title} iconSrc={tech.iconSrc}/>
-					))}
-				</div>
+				{techData && techData.length > 0 &&
+					<div className="flex gap-2">
+						{techData.map(tech => (
+							<TechLabel key={tech.title} title={tech.title} iconSrc={tech.iconSrc} />
+						))}
+					</div>
 				}
 				<h4 className="font-unigeo font-medium text-[28px]">{title}</h4>
 				<p className="font-cabin text-lg leading-tight text-justify md:text-left">{description}</p>
-						
+
 				<div className="flex flex-col gap-1 md:gap-4 font-unigeo text-sm">
 					{liveLink &&
-					<a
-						target="_blank"
-						href={liveLink}
-						className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
-					>
-						<ExternalLink size={14} />
-						<span>Visit site</span>
-						<span
-							className="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-all duration-500 group-hover:w-full"
-						/>
-					</a>
-				
+						<a
+							target="_blank"
+							href={liveLink}
+							className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
+						>
+							<ExternalLink size={14} />
+							<span>Visit site</span>
+							<span
+								className="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-all duration-500 group-hover:w-full"
+							/>
+						</a>
+
 					}
 					{githubLink &&
-					<a
-						target="_blank"
-						href={githubLink}
-						className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
-					>
-						<img src="/icons/github.png" alt="Github icon" className="w-[14px] h-[14px]"/>
-						<span>View code</span>
-						<span
-							className="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-[width] duration-500 group-hover:w-full"
-						/>
-					</a>
+						<a
+							target="_blank"
+							href={githubLink}
+							className="group inline-flex items-center gap-2 font-unigeo text-sm relative w-fit"
+						>
+							<img src="/icons/github.png" alt="Github icon" className="w-[14px] h-[14px]" />
+							<span>View code</span>
+							<span
+								className="absolute bottom-0 left-0 h-[1px] w-0 bg-current transition-[width] duration-500 group-hover:w-full"
+							/>
+						</a>
 					}
 
 				</div>
 			</div>
 
-					
+
 		</div>
 	);
 }
